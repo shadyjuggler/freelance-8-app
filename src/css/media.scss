@@ -1,0 +1,18 @@
+@media (max-width: 1400px) {
+    .container {
+        max-width: 100%!important;
+    }
+}
+
+// @media (min-width: 1920px) {
+//     .container {
+//         max-width: 1500px!important;
+//     }
+// }
+
+
+@media (max-width: 768px) {
+    #sidebar {
+        width: calc(100vw - 32px);
+    }
+}

@@ -1,0 +1,29 @@
+<section style="background-color: #F5F6FF;" id="app" class="min-h-screen pt-5">
+    <div class="container">
+        <div class="flex justify-between">
+            @@include('./nav.html', {})
+            @@include('./profile.html', {})
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-4 mt-8">
+            <!-- sidebar -->
+
+            <div>
+                @@include('./sidebar.html', {})
+            </div>
+
+            <div class="w-full pb-8">
+                @@include('./shops.html', {})
+            </div>
+
+            <script>
+                $('.sub-menu ul').hide();
+                $(".sub-menu p").click(function () {
+                    $(this).parent(".sub-menu").children("ul").slideToggle("100");
+                    $(this).find("svg").toggleClass("rotate-180");
+                });
+            </script>
+            <!-- main -->
+        </div>
+    </div>
+</section>

@@ -1,0 +1,43 @@
+<section id="shops">
+    <h2 class="text-xl font-semibold">Магазины</h2>
+    <p class="text-sm mt-2">
+        Подключить магазины по API. <br>
+        Это позволит автоматически импортировать данные.
+    </p>
+
+    <div style="border: 1px dashed rgba(123, 123, 137, 0.25);" class="mt-4 p-4 rounded-xl">
+        <p class="font-semibold">Как получить API токен?</p>
+        <div class="flex gap-2 mt-4 flex-wrap sm:flex-nowrap">
+            <a class="bg-white rounded-xl px-4 py-2 flex gap-2 flex items-center" href="">
+                <img src="./img/wb.svg" alt="icon">
+                <p class="text-sm">Wildberries</p>
+            </a>
+            <a class="bg-white rounded-xl px-4 py-2 flex gap-2" href="">
+                <img src="./img/ozon.svg" alt="icon">
+                <div style="font-size: 10px;"
+                    class="bg-main flex justify-center items-center px-2 rounded-lg text-white text-xs">
+                    Скоро
+                </div>
+            </a>
+            <a class="bg-white rounded-xl px-4 py-2 flex gap-2" href="">
+                <img src="./img/M.svg" alt="icon">
+                <div style="font-size: 10px;"
+                    class="bg-main flex justify-center items-center px-2 rounded-lg text-white text-xs">
+                    Скоро
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="w-full">
+            @@include('./shop.html', {})
+        </div>
+        <div class="w-full">
+            @@include('./shop2.html', {})
+        </div>
+        <div class="w-full">
+            @@include('./shop3.html', {})
+        </div>
+    </div>
+</section>
