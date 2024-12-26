@@ -1,9 +1,9 @@
 <nav class="relative flex bg-white p-1 rounded-xl  w-fit">
-    <button onclick="document.getElementById('nav-menu').classList.toggle('hidden')"
+    <button onclick="closeAll(document.getElementById('nav-menu'));"
         class="flex md:hidden bg-main rounded-lg px-2 flex items-center justify-center">
         <img class="w-6 h-auto" src="./img/burger.svg" alt="">
     </button>
-    <div id="nav-menu" class="z-40 shadow-lg md:shadow-none ring-1 md:ring-0 ring-black/5 rounded-lg md:rounded-0 absolute md:static bg-white md:bg-tranparent hidden  p-2 md:p-0 md:flex gap-1 top-full">
+    <div id="nav-menu" class="popup z-40 shadow-lg md:shadow-none ring-1 md:ring-0 ring-black/5 rounded-lg md:rounded-0 absolute md:static bg-white md:bg-tranparent hidden  p-2 md:p-0 md:flex gap-1 top-full">
         <button
             class="whitespace-nowrap text-left mt-2 md:mt-0 md:text-center rounded-md text-gray-700 transition nav-button_active px-3 xl:px-4 py-2 xl:py-3 text-sm font-medium text-gray-700 hover:bg-gray-200"
             aria-current="page">Главная</button>

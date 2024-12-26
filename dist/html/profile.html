@@ -22,7 +22,7 @@
 
         <div class="relative flex items-center md:ml-2 xl:ml-0">
             <div class="flex flex-row-reverse md:flex-row items-center cursor-pointer"
-                onclick="document.getElementById('profile-dd').classList.toggle('hidden')">
+                onclick="closeAll(document.getElementById('profile-dd'));">
                 <button type="button" class="relative flex rounded-full bg-gray-800 text-sm" id="user-menu-button"
                     aria-expanded="false" aria-haspopup="true">
                     <div class="bg-main rounded-full h-10 md:h-8 w-10 md:w-8 flex items-center justify-center">
@@ -48,7 +48,7 @@
 
 
             <div id="profile-dd"
-                class="flex flex-col gap-1 px-1 hidden absolute top-full right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none"
+                class="popup flex flex-col gap-1 px-1 hidden absolute top-full right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none"
                 role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <button
                     class="text-left rounded-md text-gray-700 transition px-3 py-3 text-sm font-medium text-gray-700 hover:bg-gray-200"
@@ -65,19 +65,42 @@
     </div>
 
 
+
+
+
     <!-- notification_active class for red dot on bell -->
-    <div
-        class="fixed z-50 shadow-md xl:shadow-none ring-1 xl:ring-0 ring-black/5 xl:relative notification_active bottom-16 xl:bottom-0 xl:right-0 right-2 cursor-pointer bg-white xl:ml-3 flex items-center justify-center rounded-full xl:rounded-lg px-4 xl:px-0 py-4 xl:px-5">
-        <svg width="17.000122" height="19.000000" viewBox="0 0 17.0001 19" fill="none"
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <desc>
-                Created with Pixso.
-            </desc>
-            <defs />
-            <path id="Icon"
-                d="M1.76 10.33L1.79 8.08C1.79 3.89 4.79 0.5 8.5 0.5C12.25 0.5 15.3 3.94 15.3 8.19L15.28 10.33C15.28 11.9 15.83 13.19 16.4 14.08C16.64 14.46 16.4 15.12 15.99 15.12L1 15.12C0.58 15.12 0.35 14.44 0.6 14.06C1.19 13.18 1.76 11.89 1.76 10.33ZM5.83 18.5L11.16 18.5"
-                stroke="#000013" stroke-opacity="0.750000" stroke-width="1.000000" stroke-linecap="round" />
-        </svg>
+    <div class="fixed z-50 xl:relative bottom-16 xl:bottom-0 xl:right-0 right-2 rounded-full xl:rounded-lg">
+        <div onclick="closeAll(document.getElementById('notification-dd'));"
+            class=" shadow-md xl:shadow-none ring-1 xl:ring-0 ring-black/5  notification_active relative  cursor-pointer bg-white xl:ml-3 flex items-center justify-center rounded-full xl:rounded-lg px-4 xl:px-0 py-4 xl:px-5">
+            <svg width="17.000122" height="19.000000" viewBox="0 0 17.0001 19" fill="none"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs />
+                <path id="Icon"
+                    d="M1.76 10.33L1.79 8.08C1.79 3.89 4.79 0.5 8.5 0.5C12.25 0.5 15.3 3.94 15.3 8.19L15.28 10.33C15.28 11.9 15.83 13.19 16.4 14.08C16.64 14.46 16.4 15.12 15.99 15.12L1 15.12C0.58 15.12 0.35 14.44 0.6 14.06C1.19 13.18 1.76 11.89 1.76 10.33ZM5.83 18.5L11.16 18.5"
+                    stroke="#000013" stroke-opacity="0.750000" stroke-width="1.000000" stroke-linecap="round" />
+            </svg>
+
+        </div>
+
+        <div id="notification-dd"
+            class="h-fit popup z-60 bg-white flex flex-col gap-1 hidden px-1 absolute bottom-full xl:top-full right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none"
+            role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+            <button
+                class="text-left rounded-md text-gray-700 transition px-3 py-3 text-sm font-medium text-gray-700 hover:bg-gray-200"
+                aria-current="page">
+                notification
+            </button>
+            <button
+                class="text-left rounded-md text-gray-700 transition px-3 py-3 text-sm font-medium text-gray-700 hover:bg-gray-200"
+                aria-current="page">
+                notification
+            </button>
+            <button
+                class="text-left rounded-md text-gray-700 transition px-3 py-3 text-sm font-medium text-gray-700 hover:bg-gray-200"
+                aria-current="page">
+                notification
+            </button>
+        </div>
     </div>
 
 </div>

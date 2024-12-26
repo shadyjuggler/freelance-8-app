@@ -15,3 +15,20 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
+
+<script>
+	function closeAll(targetPopup) {
+		const popups = document.querySelectorAll('.popup');
+		popups.forEach(popup => {
+			if (popup !== targetPopup) {
+				popup.classList.add('hidden');
+			}
+			if (!targetPopup.classList.contains('hidden')) {
+				targetPopup.classList.add('hidden');
+			} else {
+				targetPopup.classList.remove('hidden');
+
+			}
+		});
+	}
+</script>
